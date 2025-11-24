@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced AI OCR & Text Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "./script.js": "./script.js",
+            "./ocr.js": "./ocr.js",
+            "./analyzer.js": "./analyzer.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Advanced AI OCR & Text Analyzer</h1>
+            <p>Upload an image to extract and analyze text, even from blurry or distorted sources.</p>
+        </header>
+        <main>
+            <div id="uploader">
+                <div id="image-drop-zone">
+                    <p>Drag & drop an image here, or click to select</p>
+                    <img id="image-preview" src="" alt="Image preview" class="hidden">
+                </div>
+                <input type="file" id="image-input" accept="image/*" hidden>
+                <button id="analyze-btn" disabled>Analyze Image</button>
+            </div>
+            <div id="results-container">
+                <div id="loader" class="hidden">
+                    <div class="spinner"></div>
+                    <p>AI is processing the image...</p>
+                </div>
+                <div id="results" class="hidden">
+                    <div class="result-box" id="ocr-result-box">
+                        <h2><span class="icon">📄</span>Extracted Text</h2>
+                        <pre id="ocr-output"></pre>
+                    </div>
+                    <div class="result-box" id="analysis-result-box">
+                        <h2><span class="icon">🧠</span>AI Analysis</h2>
+                        <div id="analysis-output"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Powered by Advanced Websim AI</p>
+            <div class="credits">
+                <p>Developed by Siyabonga B Phakathi of The Voice & Eye of Bhambatha Inc.</p>
+                <div class="social-links">
+                    <a href="https://websim.com/@whisperinggalaxyd" target="_blank" rel="noopener noreferrer">Websim Profile</a>
+                    <span>&nbsp;•&nbsp;</span>
+                    <a href="https://www.facebook.com/@C.Datoxic.P" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
